@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<device schemaVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+  <vendor>TEST</vendor>
+  <vendorID>TEST</vendorID>
+  <name>TEST</name>
+  <series>TEST</series>
+  <version>6</version>
+  <description>TEST</description>
+  <licenseText>
+    TEST
+</licenseText>
+  <cpu>
+    <name>Xtensa LX6</name>
+    <revision>r0p0</revision>
+    <endian>little</endian>
+    <mpuPresent>false</mpuPresent>
+    <fpuPresent>true</fpuPresent>
+    <nvicPrioBits>3</nvicPrioBits>
+    <vendorSystickConfig>false</vendorSystickConfig>
+  </cpu>
+  <addressUnitBits>32</addressUnitBits>
+  <width>32</width>
+  <resetValue>0x00000000</resetValue>
+  <resetMask>0xFFFFFFFF</resetMask>
+  <peripherals>
+
+ <peripheral>
+      <name>RMT</name>
+      <description>Remote Control Peripheral</description>
+      <groupName>RMT</groupName>
+      <baseAddress>0x3FF56000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0xF8</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>RMT</name>
+        <value>47</value>
+      </interrupt>
+      <registers>
+        <register>
+          <name>INT_CLR</name>
+          <addressOffset>0xAC</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <dim>8</dim>
+              <dimIncrement>0x3</dimIncrement>
+              <dimIndex>0-7</dimIndex>
+              <name>CH%s_TX_END_INT_CLR</name>
+              <description>Set this bit to clear the rmt_ch%s_rx_end_int_raw..</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <dim>8</dim>
+              <dimIncrement>0x3</dimIncrement>
+              <dimIndex>0-7</dimIndex>
+              <name>CH%s_RX_END_INT_CLR</name>
+              <description>Set this bit to clear the rmt_ch%s_tx_end_int_raw.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <dim>8</dim>
+              <dimIncrement>0x3</dimIncrement>
+              <dimIndex>0-7</dimIndex>
+              <name>CH%s_ERR_INT_CLR</name>
+              <description>Set this bit to clear the  rmt_ch%s_err_int_raw.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <dim>8</dim>
+              <dimIncrement>0x1</dimIncrement>
+              <dimIndex>0-7</dimIndex>
+              <name>CH%s_TX_THR_EVENT_INT_CLR</name>
+              <description>Set this bit to clear the  rmt_ch%s_tx_thr_event_int_raw interrupt.</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+    </registers>
+ </peripheral>
+</peripherals>
+</device>

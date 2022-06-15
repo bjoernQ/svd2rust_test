@@ -1,0 +1,12 @@
+[package]
+name = "svd2rust-test"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+generated23 = { path = "./generated23" }
+generated24 = { path = "./generated24" }
+
+[build-dependencies]
+svd2rust24 = { package="svd2rust", version = "0.24.0" }
+svd2rust23 = { package="svd2rust", version = "0.23.0" }

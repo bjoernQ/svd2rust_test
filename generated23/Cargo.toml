@@ -1,0 +1,11 @@
+[package]
+name = "generated23"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+xtensa-lx    = { version = "0.7",  features = ["esp32"] }
+bare-metal = "1.0"
+vcell = "0.1"
